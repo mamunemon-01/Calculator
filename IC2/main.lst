@@ -1,0 +1,97 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+  16               	.Ltext0:
+  17               	.global	main
+  19               	main:
+  20               	.LFB6:
+  21               	.LM1:
+  22               	/* prologue: frame size=0 */
+  23               	/* prologue end (size=0) */
+  24               	.LM2:
+  25 0000 8FEF      		ldi r24,lo8(-1)
+  26 0002 81BB      		out 49-0x20,r24
+  27               	.LM3:
+  28 0004 82BB      		out 50-0x20,r24
+  29 0006 24EF      		ldi r18,lo8(500)
+  30 0008 31E0      		ldi r19,hi8(500)
+  31               	.LVL0:
+  32               	.L2:
+  33               	.LBB18:
+  34               	.LBB19:
+  35               	.LBB20:
+  36               	.LBB21:
+  37               	.LM4:
+  38 000a 88EC      		ldi r24,lo8(200)
+  39 000c 90E0      		ldi r25,hi8(200)
+  40               	.LVL1:
+  41               	/* #APP */
+  42 000e 0197      		1: sbiw r24,1
+  43 0010 01F4      		brne 1b
+  44               	/* #NOAPP */
+  45               	.LBE21:
+  46               	.LBE20:
+  47               	.LM5:
+  48 0012 2150      		subi r18,lo8(-(-1))
+  49 0014 3040      		sbci r19,hi8(-(-1))
+  50               	.LM6:
+  51 0016 01F4      		brne .L2
+  52               	.LBE19:
+  53               	.LBE18:
+  54               	.LM7:
+  55 0018 17BA      		out 55-0x20,__zero_reg__
+  56               	.LVL2:
+  57               	.L4:
+  58               	.LM8:
+  59 001a 86B3      		in r24,54-0x20
+  60               	.LVL3:
+  61 001c 803F      		cpi r24,lo8(-16)
+  62 001e 01F4      		brne .L5
+  63               	.LM9:
+  64 0020 88EF      		ldi r24,lo8(-8)
+  65 0022 00C0      		rjmp .L11
+  66               	.L5:
+  67               	.LM10:
+  68 0024 86B3      		in r24,54-0x20
+  69               	.L11:
+  70 0026 82BB      		out 50-0x20,r24
+  71               	.LBB22:
+  72               	.LBB23:
+  73               	.LBB24:
+  74               	.LBB25:
+  75               	.LM11:
+  76 0028 80E1      		ldi r24,lo8(10000)
+  77 002a 97E2      		ldi r25,hi8(10000)
+  78               	.LVL4:
+  79               	/* #APP */
+  80 002c 0197      		1: sbiw r24,1
+  81 002e 01F4      		brne 1b
+  82               	/* #NOAPP */
+  83 0030 00C0      		rjmp .L4
+  84               	.LBE25:
+  85               	.LBE24:
+  86               	.LBE23:
+  87               	.LBE22:
+  88               	/* epilogue: frame size=0 */
+  89               	/* epilogue: noreturn */
+  90               	/* epilogue end (size=0) */
+  91               	/* function main size 31 (31) */
+  92               	.LFE6:
+ 118               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:2      *ABS*:0000003f __SREG__
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:3      *ABS*:0000003e __SP_H__
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:4      *ABS*:0000003d __SP_L__
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:5      *ABS*:00000000 __tmp_reg__
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:6      *ABS*:00000001 __zero_reg__
+C:\Users\mamun\AppData\Local\Temp/cceItaUR.s:19     .text:00000000 main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
